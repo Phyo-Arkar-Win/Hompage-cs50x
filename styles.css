@@ -1,0 +1,24 @@
+body{
+    background-color:#212121;
+}
+.card{
+    border-radius:3.5%;
+}
+.explanationHeaders{
+    text-decoration:underline;
+    font-weight:bold;
+}
+img{
+    height:225px;
+    width:200px;
+}
+.caesarImage{
+    border-style:solid;
+}
+.footer{
+    position:sticky;
+    bottom:0;
+}
+.footerDivs{
+    background-color:#ffffff;
+}

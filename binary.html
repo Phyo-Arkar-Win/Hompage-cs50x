@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <script src="script.js"></script>
+        <title>Text to Binary Converter</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="display-5 fw-bold text-center text-white py-3">Text-to-Binary Converter</h1>
+        </div>
+
+        <!-- Container for the input-section. -->
+        <div class="container border p-4">
+            <h4 class="text-white">Input</h4>
+
+            <div class="textBox">
+                <label for="binaryInput" class="form-label text-white">Please enter the text you want to convert.</label>
+                <textarea class="form-control" id="binaryInput" rows="2"></textarea>
+            </div>
+
+            <div class="container text-end p-0 mt-3">
+                <button type="button" class="btn btn-primary" id="binaryConvert">Convert</button>
+            </div>
+        </div>
+        <script>
+            document.getElementById("binaryConvert").addEventListener("click", binary);
+        </script>
+
+        <!-- Container for the output-section. -->
+        <div class="outputBox container border p-4 mt-5">
+            <h4 class="text-white">Output</h4>
+            <div class="textBox">
+                <textarea class="form-control mt-2" id="binaryOutput" rows="2"></textarea>
+            </div>
+        </div>
+
+        <div class="container mt-3 p-0">
+            <button type="button" class="btn btn-primary me-2" data-bs-toggle="collapse" data-bs-target="#binaryExplanation" aria-expanded="false" aria-controls="binaryExplanation">
+                What is a Binary Converter?
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#binaryUsage" aria-expanded="false" aria-controls="binaryUsage">
+                Usage
+            </button>
+        </div>
+        <div class="collapse mt-3" id="binaryExplanation">
+            <div class="container border p-4 rounded-3 text-white">
+                <div class="container p-0">
+                    <h5 class="explanationHeaders">Binary Converter</h5>
+                    <div>
+                        Computers, unlike us, humans, can only understand 0s and 1s which is called a Binary System(Base-2 Numeral system).
+                        This converter lets you convert strings, numbers and special characters into binary numbers.<br>
+                        Example - the letter 'A' to '1000001', the numeric number '1' to '110001'.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse my-3" id="binaryUsage">
+            <div class="container border p-4 rounded-3 text-white">
+                <div class="container p-0">
+                    <h5 class="explanationHeaders">Usage</h5>
+                    <div>
+                        To convert a letter, a sentence, a number or a special character into binary digits, enter what you want to convert in the input
+                        text box and press 'Convert'.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container p-0 my-2 text-end">
+            <div class="dropdown p-0 my-3">
+                <a class="btn btn-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Go to
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Homepage</a></li>
+                <li><a class="dropdown-item" href="hex.html">Hex-Text Converter</a></li>
+                <li><a class="dropdown-item" href="caesar.html">Caesar Cipher Encryptor</a></li>
+                </ul>
+            </div>
+        </div>
+
+    <footer>
+        <div class="footerDivs text-center py-2">
+            Developed by Tony
+        </div>
+    </footer>
+
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <script src="script.js"></script>
+        <title>Text-Hex Converter</title>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1 class="display-5 fw-bold text-center text-white py-3">Text-Hex Converter</h1>
+        </div>
+
+    <div class="container border p-4">
+        <h4 class="text-white">Input</h4>
+
+        <div class="textBox">
+            <label for="hexInput" class="form-label text-white">Please enter the text you want to convert.</label>
+            <textarea class="form-control" id="hexInput" rows="2"></textarea>
+        </div>
+
+        <div class="container text-end p-0 mt-3">
+            <div class="hexBtn">
+                <span class="text-white">Convert:</span>
+                <button type="button" class="btn btn-primary mx-1" id="textToHex">Text to Hex</button>
+                <button type="button" class="btn btn-primary" id="hexToText">Hex to Text</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="outputBox container border p-4 mt-5">
+        <h4 class="text-white">Output</h4>
+        <div class="textBox">
+            <textarea class="form-control mt-2" id="hexOutput" rows="2"></textarea>
+        </div>
+    </div>
+    <script>
+        document.getElementById("textToHex").addEventListener("click", function(){
+            hex('tth');
+        });
+        document.getElementById("hexToText").addEventListener("click", function(){
+            hex('htt');
+        })
+    </script>
+
+    <div class="container mt-3 p-0">
+        <button type="button" class="btn btn-primary me-2" data-bs-toggle="collapse" data-bs-target="#hexExplanation" aria-expanded="false" aria-controls="hexExplanation">What is Caesar Cipher?</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#hexUsage" aria-expanded="false" aria-controls="hexUsage">Usage</button>
+    </div>
+    <div class="collapse mt-3" id="hexExplanation">
+        <div class="container border p-4 rounded-3 text-white">
+            <div class="container p-0">
+                <h5 class="explanationHeaders">Text-Hex Converter</h5>
+                <div>
+                    Hexadecimal(base-16) system is an alternative of decimal(base-10) system which uses 16 symbols to represent numbers instead of 10.<br>
+                    While decimal system uses the symbols '0'-'9' to represent values from 0 to 9, hexadecimal system uses the symbols '0'-'9' to represent
+                    values from 0 to 9, and 'a'-'f' to represent values from 10 to 15.<br>
+                    Example - The letter 'L' of the alphabet is '4c' in hex.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="collapse my-3" id="hexUsage">
+        <div class="container border p-4 rounded-3 text-white">
+            <div class="container p-0">
+                <h5 class="explanationHeaders">Usage</h5>
+                <div>
+                    To convert text or sentence to hex, type in what you want to convert in the input text box and click 'Text to Hex'.<br>
+                    To convert hex to text, type in the hex<strong>(space seperated between each pair)</strong> in the input text box and click 'Hex to Text.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-0 my-2 text-end">
+        <div class="dropdown p-0 my-3">
+            <a class="btn btn-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Go to
+            </a>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html">Homepage</a></li>
+            <li><a class="dropdown-item" href="binary.html">Text to Binary Converter</a></li>
+            <li><a class="dropdown-item" href="caesar.html">Caesar Cipher</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerDivs text-center py-2">
+            Developed by Tony
+        </div>
+    </footer>
+
+    </body>
+</html>

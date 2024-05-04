@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <script src="script.js"></script>
+        <title>Caesar Cipher</title>
+
+    </head>
+    <body>
+
+        <div class="header">
+            <h1 class="display-5 fw-bold text-center text-white py-3">Caesar Cipher</h1>
+        </div>
+
+        <div class="container border p-4 rounded-3">
+            <h4 class="text-white">Input</h4>
+
+            <div class="textBox">
+                <label for="caesarInput" class="form-label text-white">Please enter the text you want to encrypt.</label>
+                <textarea class="form-control" id="caesarInput" rows="2"></textarea>
+            </div>
+
+            <div class="container d-flex justify-content-between p-0 mt-3">
+                <div class="d-inline-block justify-content-start">
+                    <select class="form-select" aria-label="Default select example" id="caesarKey">
+                        <option selected>Key</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                    </select>
+                </div>
+                <div class="d-inline-block">
+                    <button type="button" class="btn btn-primary" id="caesarEncrypt">Encrypt</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById("caesarEncrypt").addEventListener("click", caesar);
+        </script>
+
+
+        <div class="outputBox container border rounded-3 p-4 mt-5">
+            <h4 class="text-white">Output</h4>
+            <div class="textBox">
+                <textarea class="form-control mt-2" id="caesarOutput" rows="2"></textarea>
+            </div>
+        </div>
+
+        <div class="container mt-3 p-0">
+            <button type="button" class="btn btn-primary me-2" data-bs-toggle="collapse" data-bs-target="#caesarExplanation" aria-expanded="false" aria-controls="caesarExplanation">What is Caesar Cipher?</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#caesarUsage" aria-expanded="false" aria-controls="caesarUsage">Usage</button>
+        </div>
+        <div class="collapse mt-3" id="caesarExplanation">
+            <div class="container border p-4 rounded-3 text-white">
+                <div class="container p-0">
+                    <h5 class="explanationHeaders">Caesar Cipher</h5>
+                    <div>
+                        In Cryptography, a Caesar Cipher is a substitution method where letters in the alphabets are replaced with the letter
+                        with a number of positions down the alphabet according to the key provided. <br>
+                        Example - Shifting the letter 'A' with a key of 2 would output the letter 'C'.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse my-3" id="caesarUsage">
+            <div class="container border p-4 rounded-3 text-white">
+                <div class="container p-0">
+                    <h5 class="explanationHeaders">Usage</h5>
+                    <div>
+                        To encrypt the plaintext into ciphertext, enter the text you want to encrypt in the input text box, pick the key you want, and
+                        press the 'Encryt' button.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container p-0 my-2 text-end">
+            <div class="dropdown p-0 my-3">
+                <a class="btn btn-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Go to
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html">Homepage</a></li>
+                  <li><a class="dropdown-item" href="binary.html">Text to Binary Converter</a></li>
+                  <li><a class="dropdown-item" href="hex.html">Hex-Text Converter</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footerDivs text-center py-2">
+                Developed by Tony
+            </div>
+        </footer>
+
+    </body>
+</html>
